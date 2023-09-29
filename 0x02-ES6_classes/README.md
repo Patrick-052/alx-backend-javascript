@@ -1,14 +1,7 @@
 # alx-backend-javascript
 
-## 0x02-ES6_classes
-This project is about classes in ES6 and Metaprogramming in Javascript.
+0x02-ES6_classes
 
-## Overview
-- Defining a Class
-- Adding methods to a class
-- Why and how to add a static method to a classes
-- Extending a class from another
-- Metaprogramming and symbols
 
                       ____   _  _____ ____  ___ ____ _  __
                      |  _ \ / \|_   _|  _ \|_ _/ ___| |/ /
