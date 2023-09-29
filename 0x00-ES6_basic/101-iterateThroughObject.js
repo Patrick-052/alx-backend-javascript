@@ -6,5 +6,6 @@ export default function iterateThroughObject(reportWithIterator) {
     res += `${n.value} | `;
     n = reportWithIterator.next();
   }
+
   return res.slice(0, res.length - 3);
 }
