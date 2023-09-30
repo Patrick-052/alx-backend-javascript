@@ -7,7 +7,7 @@ console.log(c1);
 
 try {
     c1.name = 12;
-} 
+}
 catch(err) {
     console.log(err);
 }
