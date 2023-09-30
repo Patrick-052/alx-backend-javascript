@@ -1,9 +1,9 @@
-//Implementing a simple class named ClassRoom
+// Implementing a simple class named ClassRoom
 class ClassRoom {
-	constructor(maxStudentsSize) {
-		this._maxStudentsSize = maxStudentsSize;
-	}
+  constructor(maxStudentsSize) {
+    this._maxStudentsSize = maxStudentsSize;
+  }
 }
 
-//Exporting the ClassRoom class
-export default class ClassRoom;
+// Exporting the ClassRoom class
+export default ClassRoom;
