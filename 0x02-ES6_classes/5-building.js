@@ -9,7 +9,7 @@ export default class Building {
     this._sqft = sqft;
   }
 
-  //Getter and setter for sqft
+  // Getter and setter for sqft
   get sqft() {
     return this._sqft;
   }
