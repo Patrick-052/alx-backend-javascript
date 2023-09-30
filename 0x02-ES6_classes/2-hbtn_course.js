@@ -26,6 +26,9 @@ export default class HolbertonCourse {
   }
 
   set name(newName) {
+    if (typeof newName !== 'string') {
+      throw TypeError('Name must be a string');
+    }
     this._name = newName;
   }
 
@@ -35,6 +38,9 @@ export default class HolbertonCourse {
   }
 
   set length(newLength) {
+    if (typeof newLength !== 'number' || isNaN(newLength)) {
+      throw TypeError('Length must be a number');
+    }
     this._length = newLength;
   }
 
