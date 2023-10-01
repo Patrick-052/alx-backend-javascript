@@ -1,7 +1,9 @@
+/* Looping through array using for..of loop */
+
 export default function appendToEachArrayValue(array, appendString) {
-  const myarray = [];
+  const newarray = [];
   for (const item of array) {
-    myarray.push(appendString + item);
+    newarray.push(appendString + item);
   }
-  return myarray;
+  return newarray;
 }
