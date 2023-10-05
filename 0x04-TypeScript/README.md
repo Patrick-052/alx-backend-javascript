@@ -1,9 +1,9 @@
 # alx-backend-javascript
 
-##0x04-TypeScript
+## 0x04-TypeScript
 This project is about TypeScript and how to use it.
 
-##Objectives
+## Objectives
 - Basic types in Typescript
 - Interfaces, Classes, and functions
 - How to work with the DOM and Typescript
@@ -13,8 +13,8 @@ This project is about TypeScript and how to use it.
 - How to use an ambient Namespace to import an external library
 - Basic nominal typing with Typescript
 
-##Resources
-- [TypeScript documentation] (https://www.typescriptlang.org/docs/)
+## Resources
+- [TypeScript documentation](https://www.typescriptlang.org/docs/)
 
 
                       ____   _  _____ ____  ___ ____ _  __
