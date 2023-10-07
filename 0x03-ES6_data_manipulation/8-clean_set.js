@@ -2,13 +2,20 @@
 the set values separated by a hyphen (-) */
 
 export default function cleanSet(set, startString) {
-  if (startString === '') {
+  if (typeof startString !== 'string' || startString.length === 0) {
     return '';
   }
-  const string = Array.from(set).filter((str) => str.startsWith(startString));
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < string.length; i++) {
-    string[i] = string[i].slice(startString.length);
+
+  let result = '';
+
+  for (let item of set) {
+    if (item.startsWith(startString)) {
+      if (result.length !== 0) {
+        result += '-';
+      }
+      result += item.slice(startString.length);
+    }
   }
-  return string.join('-');
+
+  return result;
 }
