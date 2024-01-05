@@ -16,4 +16,7 @@ handleResponseFromAPI.then((result) => {
   .catch((error) => {
     console.log(error);
     return error;
-  });
+})
+  .finally(() => {
+	console.log('Got a response from the API');
+});
