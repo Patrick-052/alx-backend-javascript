@@ -6,6 +6,21 @@ Map students with grades:
 - Return each student with their new grade
 */
 
+/* Solution one */
+export default function updateStudentGradeByCity(students, city, newGrades) {
+  const SBC = students.filter((student) => student.location === city);
+  const SWG = SBC.map((student) => {
+    newGrades.forEach((grade) => {
+      if (grade.studentId === student.id) student.grade = grade.grade;
+    });
+    if (!student.grade) student.grade = 'N/A';
+    return student;
+  });
+  return SWG;
+}
+
+
+/* Alternative solution: */
 export default function updateStudentGradeByCity(students, city, newGrades) {
   const SBC = students.filter((student) => student.location === city);
   const SWG = SBC.map((student) => {
