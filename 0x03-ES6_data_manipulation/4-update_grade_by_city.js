@@ -7,29 +7,29 @@ Map students with grades:
 */
 
 /* Solution one */
-// export default function updateStudentGradeByCity(students, city, newGrades) {
-//   const SBC = students.filter((student) => student.location === city);
-//   const SWG = SBC.map((student) => {
-//     newGrades.forEach((grade) => {
-//       if (grade.studentId === student.id) student.grade = grade.grade;
-//     });
-//     if (!student.grade) student.grade = 'N/A';
-//     return student;
-//   });
-//   return SWG;
-// }
+export default function updateStudentGradeByCity(students, city, newGrades) {
+  const SBC = students.filter((student) => student.location === city);
+  const SWG = SBC.map((student) => {
+    newGrades.forEach((grade) => {
+      if (grade.studentId === student.id) student.grade = grade.grade;
+    });
+    if (!student.grade) student.grade = 'N/A';
+    return student;
+  });
+  return SWG;
+}
 
 // /* Alternative solution: */
-// export default function updateStudentGradeByCity(students, city, newGrades) {
-//   const SBC = students.filter((student) => student.location === city);
-//   const SWG = SBC.map((student) => {
-//     const grade = newGrades.filter((grade) => grade.studentId === student.id);
-//     if (grade[0]) student.grade = grade[0].grade;
-//     else student.grade = 'N/A';
-//     return student;
-//   });
-//   return SWG;
-// }
+export default function updateStudentGradeByCity(students, city, newGrades) {
+  const SBC = students.filter((student) => student.location === city);
+  const SWG = SBC.map((student) => {
+    const grade = newGrades.filter((grade) => grade.studentId === student.id);
+    if (grade[0]) student.grade = grade[0].grade;
+    else student.grade = 'N/A';
+    return student;
+  });
+  return SWG;
+}
 
 // /* Alternative solution: */
 export default function updateStudentGradeByCity1(students, city, newGrades) {
