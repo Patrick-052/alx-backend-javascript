@@ -7,18 +7,17 @@ Map students with grades:
 */
 
 /* Solution one */
-export default function updateStudentGradeByCity(students, city, newGrades) {
-  const SBC = students.filter((student) => student.location === city);
-  const SWG = SBC.map((student) => {
-    newGrades.forEach((grade) => {
-      if (grade.studentId === student.id) student.grade = grade.grade;
-    });
-    if (!student.grade) student.grade = 'N/A';
-    return student;
-  });
-  return SWG;
-}
-
+// export default function updateStudentGradeByCity(students, city, newGrades) {
+//   const SBC = students.filter((student) => student.location === city);
+//   const SWG = SBC.map((student) => {
+//     newGrades.forEach((grade) => {
+//       if (grade.studentId === student.id) student.grade = grade.grade;
+//     });
+//     if (!student.grade) student.grade = 'N/A';
+//     return student;
+//   });
+//   return SWG;
+// }
 
 // /* Alternative solution: */
 // export default function updateStudentGradeByCity(students, city, newGrades) {
@@ -33,12 +32,12 @@ export default function updateStudentGradeByCity(students, city, newGrades) {
 // }
 
 // /* Alternative solution: */
-// export default function updateStudentGradeByCity1(students, city, newGrades) {
-//   const studentsByCity = students.filter((student) => student.location === city);
-//   const studentsWithGrades = studentsByCity.map((student) => {
-//     const studentGrade = newGrades.filter((grade) => grade.studentId === student.id);
-//     const grade = studentGrade.length > 0 ? studentGrade[0].grade : 'N/A';
-//     return { ...student, grade };
-//   });
-//   return studentsWithGrades;
-// }
+export default function updateStudentGradeByCity1(students, city, newGrades) {
+  const studentsByCity = students.filter((student) => student.location === city);
+  const studentsWithGrades = studentsByCity.map((student) => {
+    const studentGrade = newGrades.filter((grade) => grade.studentId === student.id);
+    const grade = studentGrade.length > 0 ? studentGrade[0].grade : 'N/A';
+    return { ...student, grade };
+  });
+  return studentsWithGrades;
+}
